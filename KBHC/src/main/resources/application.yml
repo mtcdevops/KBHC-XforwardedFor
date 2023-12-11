@@ -17,5 +17,5 @@ server:
     
 logging:
   level:
-    root: info
+    root: DEBUG
   config: classpath:log4j2.yml
