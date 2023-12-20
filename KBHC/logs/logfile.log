@@ -4,3 +4,24 @@
 2023-12-20 15:43:12.028 [INFO ] [org.springframework.boot.SpringApplication] [restartedMain]- No active profile set, falling back to 1 default profile: "default"
 2023-12-20 15:43:12.096 [INFO ] [org.springframework.boot.logging.DeferredLog] [restartedMain]- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
 2023-12-20 15:43:12.096 [INFO ] [org.springframework.boot.logging.DeferredLog] [restartedMain]- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-20 15:43:14.301 [INFO ] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain]- Tomcat initialized with port(s): 8080 (http)
+2023-12-20 15:43:14.347 [INFO ] [org.apache.juli.logging.DirectJDKLog] [restartedMain]- Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-20 15:43:14.353 [INFO ] [org.apache.juli.logging.DirectJDKLog] [restartedMain]- Starting service [Tomcat]
+2023-12-20 15:43:14.354 [INFO ] [org.apache.juli.logging.DirectJDKLog] [restartedMain]- Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-12-20 15:43:14.856 [INFO ] [org.apache.juli.logging.DirectJDKLog] [restartedMain]- At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-20 15:43:14.876 [INFO ] [org.apache.juli.logging.DirectJDKLog] [restartedMain]- Initializing Spring embedded WebApplicationContext
+2023-12-20 15:43:14.877 [INFO ] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [restartedMain]- Root WebApplicationContext: initialization completed in 2778 ms
+2023-12-20 15:43:15.356 [INFO ] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [restartedMain]- Adding welcome page template: index
+2023-12-20 15:43:15.650 [INFO ] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [restartedMain]- LiveReload server is running on port 35729
+2023-12-20 15:43:15.672 [INFO ] [org.apache.juli.logging.DirectJDKLog] [restartedMain]- Starting ProtocolHandler ["http-nio-8080"]
+2023-12-20 15:43:15.769 [INFO ] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [restartedMain]- Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-20 15:43:15.784 [INFO ] [org.springframework.boot.StartupInfoLogger] [restartedMain]- Started KbhcApplication in 4.439 seconds (JVM running for 10.674)
+2023-12-20 15:43:16.029 [INFO ] [org.apache.juli.logging.DirectJDKLog] [http-nio-8080-exec-1]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-20 15:43:16.029 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-1]- Initializing Servlet 'dispatcherServlet'
+2023-12-20 15:43:16.032 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8080-exec-1]- Completed initialization in 2 ms
+2023-12-20 16:11:24.133 [INFO ] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] [RMI TCP Connection(38)-127.0.0.1]- Application shutdown requested.
+2023-12-20 16:11:24.160 [INFO ] [org.apache.juli.logging.DirectJDKLog] [RMI TCP Connection(38)-127.0.0.1]- Pausing ProtocolHandler ["http-nio-8080"]
+2023-12-20 16:11:24.160 [INFO ] [org.apache.juli.logging.DirectJDKLog] [RMI TCP Connection(38)-127.0.0.1]- Stopping service [Tomcat]
+2023-12-20 16:11:24.164 [INFO ] [org.apache.juli.logging.DirectJDKLog] [RMI TCP Connection(38)-127.0.0.1]- Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-12-20 16:11:24.197 [INFO ] [org.apache.juli.logging.DirectJDKLog] [RMI TCP Connection(38)-127.0.0.1]- Stopping ProtocolHandler ["http-nio-8080"]
+2023-12-20 16:11:24.198 [INFO ] [org.apache.juli.logging.DirectJDKLog] [RMI TCP Connection(38)-127.0.0.1]- Destroying ProtocolHandler ["http-nio-8080"]

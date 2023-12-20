@@ -20,3 +20,5 @@
 2023-12-20 15:35:17.163+09:00 INFO  c.m.applicationinsights.agent - Java version: 17.0.6, vendor: Eclipse Adoptium, home: D:\USB\STS\sts-4.18.0.RELEASE\JDK\jdk-17.0.6+10
 2023-12-20 15:37:35.147+09:00 INFO  c.m.applicationinsights.agent - Application Insights Java Agent 3.4.9 started successfully (PID 16328, JVM running for 4.183 s)
 2023-12-20 15:37:35.160+09:00 INFO  c.m.applicationinsights.agent - Java version: 17.0.6, vendor: Eclipse Adoptium, home: D:\USB\STS\sts-4.18.0.RELEASE\JDK\jdk-17.0.6+10
+2023-12-20 15:43:09.309+09:00 INFO  c.m.applicationinsights.agent - Application Insights Java Agent 3.4.9 started successfully (PID 7348, JVM running for 4.198 s)
+2023-12-20 15:43:09.323+09:00 INFO  c.m.applicationinsights.agent - Java version: 17.0.6, vendor: Eclipse Adoptium, home: D:\USB\STS\sts-4.18.0.RELEASE\JDK\jdk-17.0.6+10
