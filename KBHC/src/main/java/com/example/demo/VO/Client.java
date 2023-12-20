@@ -10,7 +10,7 @@ public class Client {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	public String getRemoteIP(HttpServletRequest request){
 		
-		String ip = request.getHeader("x-forwarded-for"); 
+		String ip = request.getHeader("X-Forwarded-For"); 
 		String chekc = null;
 		//proxy 환경일 경우
 		if (ip == null || ip.length() == 0) {

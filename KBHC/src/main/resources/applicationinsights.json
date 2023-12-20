@@ -1,0 +1,3 @@
+{
+  "connectionString":"InstrumentationKey=4807308d-1ed7-41d1-8506-467f34939d6b;IngestionEndpoint=https://koreacentral-0.in.applicationinsights.azure.com/;LiveEndpoint=https://koreacentral.livediagnostics.monitor.azure.com/"
+}

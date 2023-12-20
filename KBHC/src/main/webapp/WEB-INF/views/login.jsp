@@ -4,6 +4,7 @@
 
 <% String hostname = (String)request.getAttribute("hostname"); %>
 <% String ip = (String)request.getAttribute("ip"); %>
+<% String clientIP = (String)request.getAttribute("clientIP"); %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +25,7 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-5">
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
+                                <div class="card-header"><h3 class="text-center font-weight-light my-4"></h3><p>Login <%=clientIP %></p></div>
                                 <div class="card-body">
                                     <form action="/login" method="post">
                                         <div class="form-floating mb-3">

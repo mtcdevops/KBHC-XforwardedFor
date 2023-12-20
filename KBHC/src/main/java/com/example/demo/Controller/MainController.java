@@ -1,14 +1,19 @@
 package com.example.demo.Controller;
 
+
+import java.io.PrintWriter;
+import java.io.StringWriter;
+import java.net.HttpURLConnection;
 import java.net.InetAddress;
+import java.net.URL;
 import java.net.UnknownHostException;
-import java.util.ArrayList;
+import java.util.Map;
+import java.util.Properties;
+import java.util.Set;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.servlet.http.HttpSessionBindingEvent;
-import javax.servlet.http.HttpSessionBindingListener;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -90,6 +95,10 @@ public class MainController {
 		  e.printStackTrace();
 		  logger.info("Exception : "+e);
 		}
+		 
+		Client client = new Client();
+		String ip = client.getRemoteIP(request);
+		modelAndView.addObject("clientIP",ip);
 		
 		/* CPU 사용량 */
 		return modelAndView;
@@ -153,4 +162,51 @@ public class MainController {
 		return new PCMonitorChartVO();
 	}
 	
+	@PostMapping("proxytest")
+	@ResponseBody
+	public String proxytest(HttpServletRequest request, HttpServletResponse response, @RequestParam(name = "url") String url) {
+		System.out.println("PROXY TEST URL :"+url);
+		String result = "";
+		
+		logger.debug("============= PROXY LOG =============");
+		try {
+            // HTTP 테스트
+            URL httpUrl = new URL("http://"+url);
+            HttpURLConnection httpURLConnection = (HttpURLConnection) httpUrl.openConnection();
+            System.out.println("HTTP Response Code: " + httpURLConnection.getResponseCode());
+            result = "<h3 style=\"color : #3a6351\">HTTP Response Code: " + httpURLConnection.getResponseCode()+"</h3>";
+            // HTTPS 테스트
+            URL httpsUrl = new URL("https://"+url);
+            HttpURLConnection httpsURLConnection = (HttpURLConnection) httpsUrl.openConnection();
+            System.out.println("HTTPS Response Code: " + httpsURLConnection.getResponseCode());
+            result += "<h3 style=\"color : #3a6351\">HTTPS Response Code: " + httpsURLConnection.getResponseCode()+"</h3>";
+        } catch (Exception e) {
+        	StringWriter sw = new StringWriter();
+        	PrintWriter pw = new PrintWriter(sw);
+            e.printStackTrace(pw);
+            result = "<hr>";
+            result += "<h1 style=\"color : #be0000\">Exception Log</h1>";
+            result += sw.toString();
+        }
+		result += "<hr>";
+		result +="<h2>OS 환경변수</h2>" 
+				+"<br>"+System.getenv();
+		
+		result += "<hr>";
+		result +="<h2>JVM 환경변수</h2>" ;
+		Properties properties = System.getProperties();
+		StringBuilder resultBuilder = new StringBuilder();
+		Set<Map.Entry<Object, Object>> entrySet = properties.entrySet();
+		for (Map.Entry<Object, Object> entry : entrySet) {
+			resultBuilder.append("<br>").append(entry.getKey()).append(": ").append(entry.getValue());
+		}
+		return result+resultBuilder;
+	}
+	
+	@GetMapping("proxy")
+	public ModelAndView proxyPage(HttpServletRequest request, HttpServletResponse response) {
+		ModelAndView modelAndView = new ModelAndView("proxy");
+		System.out.println("proxy.jsp");
+		return modelAndView;
+	}
 }
